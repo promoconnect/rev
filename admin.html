@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromoConnect Admin</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #000814; color: white; }
+
+    .container { max-width: 1200px; margin: auto; padding: 20px 20px 90px; }
+
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+
+    .card { background: linear-gradient(145deg, #001d3d, #003566); border-radius: 16px; padding: 20px; border: 1px solid #3a86ff; margin-bottom: 20px; }
+
+    input, select, textarea { width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #3a86ff; background: #000; color: white; box-sizing: border-box; }
+
+    button { background: #3a86ff; color: white; border: none; padding: 12px; border-radius: 30px; cursor: pointer; width: 100%; }
+
+    .graph { height: 220px; }
+
+    .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #1d3557; }
+
+    .nav { position: fixed; bottom: 0; left: 0; width: 100%; background: #001d3d; border-top: 1px solid #3a86ff; display: flex; justify-content: space-around; padding: 15px 0; }
+
+    .nav div { cursor: pointer; }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <img src="logo.jpg" alt="PromoConnect Logo" style="width:36px;height:36px;border-radius:8px;">
+        <h1 style="margin:0;">PromoConnect Admin</h1>
+      </div>
+      <div>🔔 ⚙️</div>
+    </div>
+
+    <div class="card" id="homeSection">
+      <h2>🏠 Home Dashboard</h2>
+      <p style="color:#8ecae6;">Welcome back, Maria — here's your business overview</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:15px;">
+        <div class="card" style="padding:12px;">
+          <p>💰 Today’s Sales</p>
+          <h3>₱5,200</h3>
+        </div>
+        <div class="card" style="padding:12px;">
+          <p>📈 Active Promos</p>
+          <h3>3 Running</h3>
+        </div>
+        <div class="card" style="padding:12px;">
+          <p>💬 Messages</p>
+          <h3>5 New</h3>
+        </div>
+        <div class="card" style="padding:12px;">
+          <p>⭐ Loyalty Users</p>
+          <h3>120 Members</h3>
+        </div>
+      </div>
+
+      <h3 style="margin-top:15px;">🔥 Active Promotions</h3>
+      <div class="row"><span>Buy 1 Get 1 Milk Tea</span><span>Running</span></div>
+      <div class="row"><span>Weekend 20% Sale</span><span>Running</span></div>
+      <div class="row"><span>Free Add-ons Promo</span><span>Ending Soon</span></div>
+
+      <h3 style="margin-top:15px;">⚡ Quick Actions</h3>
+      <div class="row"><span>Create Promo</span><span>→</span></div>
+      <div class="row"><span>View Analytics</span><span>→</span></div>
+      <div class="row"><span>Check Messages</span><span>→</span></div>
+    </div>
+
+    <div class="card" id="eventSection" style="display:none;">
+      <h2>🎯 Create Promotion Campaign</h2>
+      <p style="color:#8ecae6;">Design and launch your marketing campaign</p>
+
+      <h3>🖌 Campaign Design</h3>
+      <input type="text" placeholder="Campaign Name (e.g. Summer Blast Promo)">
+
+      <select>
+        <option>Select Product</option>
+        <option>Milk Tea</option>
+        <option>Coffee</option>
+        <option>Snacks</option>
+      </select>
+
+      <select>
+        <option>Select Discount Type</option>
+        <option>Percentage (%)</option>
+        <option>Buy 1 Get 1</option>
+        <option>Fixed Price</option>
+      </select>
+
+      <input type="text" placeholder="Discount Value">
+
+      <h3>🎨 Campaign Theme</h3>
+      <select>
+        <option>Blue Energy Theme</option>
+        <option>Dark Premium Theme</option>
+        <option>Summer Vibes Theme</option>
+        <option>Minimal Clean Theme</option>
+      </select>
+
+      <h3>👥 Target Audience</h3>
+      <select>
+        <option>All Customers</option>
+        <option>New Customers</option>
+        <option>VIP Loyalty Members</option>
+        <option>Inactive Customers</option>
+      </select>
+
+      <h3>📅 Campaign Schedule</h3>
+      <label>Start Date</label>
+      <input type="date">
+
+      <label>End Date</label>
+      <input type="date">
+
+      <h3>🤖 AI Visual Generator</h3>
+      <p style="color:#8ecae6;">Generate an AI-powered campaign poster preview</p>
+
+      <div style="margin-top:10px; border:1px solid #3a86ff; border-radius:12px; padding:10px; background:#000; text-align:center;">
+        <img src="https://via.placeholder.com/600x250.png?text=AI+Campaign+Image" alt="AI Campaign" style="width:100%; border-radius:10px;">
+      </div>
+
+      <button style="margin-top:10px;">✨ Generate AI Image</button>
+
+      <h3>📢 Campaign Preview</h3>
+      <div style="padding:15px; border:1px solid #3a86ff; border-radius:12px; background:#000;">
+        <h3 style="margin:0;">🔥 Summer Blast Promo</h3>
+        <p style="color:#8ecae6;">Get up to 20% OFF on selected drinks!</p>
+      </div>
+
+      <button style="margin-top:15px;">Launch Campaign 🚀</button>
+    </div>
+
+    <div class="card" id="dataSection" style="display:none;">
+      <h2>📊 Analytics Dashboard</h2>
+      <p style="color:#8ecae6;">Advanced Promotion Tracking & Sales Intelligence</p>
+
+      <canvas id="salesChart" class="graph"></canvas>
+
+      <h3 style="margin-top:15px;">🎯 Promotion Tracking System</h3>
+
+      <div class="card" style="padding:12px; margin-top:10px;">
+        <p><strong>BOGO Milk Tea</strong> <span style="color:#00ff99;">Active</span></p>
+        <div style="background:#000; border:1px solid #3a86ff; border-radius:10px; height:10px; margin:8px 0;">
+          <div style="width:78%; height:100%; background:#3a86ff; border-radius:10px;"></div>
+        </div>
+        <p>120 Sales | ₱6,000 Revenue | ROI +32%</p>
+      </div>
+
+      <div class="card" style="padding:12px; margin-top:10px;">
+        <p><strong>Weekend 20% Sale</strong> <span style="color:#ffcc00;">Ending Soon</span></p>
+        <div style="background:#000; border:1px solid #3a86ff; border-radius:10px; height:10px; margin:8px 0;">
+          <div style="width:62%; height:100%; background:#3a86ff; border-radius:10px;"></div>
+        </div>
+        <p>80 Sales | ₱3,200 Revenue | ROI +18%</p>
+      </div>
+
+      <div class="card" style="padding:12px; margin-top:10px;">
+        <p><strong>Free Add-ons Promo</strong> <span style="color:#ff4d6d;">Low Performance</span></p>
+        <div style="background:#000; border:1px solid #3a86ff; border-radius:10px; height:10px; margin:8px 0;">
+          <div style="width:40%; height:100%; background:#3a86ff; border-radius:10px;"></div>
+        </div>
+        <p>65 Sales | ₱2,450 Revenue | ROI +9%</p>
+      </div>
+
+      <h3 style="margin-top:15px;">📈 Insights</h3>
+      <div class="row"><span>Top Performing Promo</span><span>BOGO Milk Tea</span></div>
+      <div class="row"><span>Highest ROI</span><span>BOGO Milk Tea</span></div>
+      <div class="row"><span>Lowest Performance</span><span>Free Add-ons Promo</span></div>
+
+      <h3 style="margin-top:15px;">📊 Weekly Growth</h3>
+      <div class="row"><span>Sales Growth</span><span>+18%</span></div>
+      <div class="row"><span>Promo Effectiveness</span><span>+22%</span></div>
+    </div>
+
+    <div class="card" id="loyaltySection" style="display:none;">
+      <h2>⭐ Loyalty Program</h2>
+      <p style="color:#8ecae6;">Advanced customer rewards & feedback system</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:10px;">
+        <div class="card" style="padding:10px;">
+          <p>👥 Members</p>
+          <h3>120</h3>
+        </div>
+        <div class="card" style="padding:10px;">
+          <p>⭐ Avg Points</p>
+          <h3>85</h3>
+        </div>
+        <div class="card" style="padding:10px;">
+          <p>🎁 Redeemed</p>
+          <h3>35</h3>
+        </div>
+      </div>
+
+      <h3 style="margin-top:15px;">🏆 Customer Tiers</h3>
+      <div class="row"><span>Juan Dela Cruz</span><span>⭐ 120 pts (Gold)</span></div>
+      <div class="row"><span>Anna Reyes</span><span>⭐ 80 pts (Silver)</span></div>
+      <div class="row"><span>Mark Santos</span><span>⭐ 45 pts (Bronze)</span></div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:15px;">
+        <button>➕ Add Points</button>
+        <button>🎁 Redeem Reward</button>
+      </div>
+
+      <h3 style="margin-top:15px;">🎁 Rewards System</h3>
+      <div class="row"><span>100 pts</span><span>Free Drink</span></div>
+      <div class="row"><span>200 pts</span><span>20% Discount</span></div>
+
+      <h3 style="margin-top:15px;">⭐ Customer Feedback</h3>
+
+      <div class="card" style="padding:12px; margin-top:10px;">
+        <p><strong>Juan Dela Cruz</strong> ⭐⭐⭐⭐⭐</p>
+        <p>Great promos and fast service!</p>
+        <span style="color:#00ff99;">Positive</span>
+      </div>
+
+      <div class="card" style="padding:12px; margin-top:10px;">
+        <p><strong>Anna Reyes</strong> ⭐⭐⭐⭐</p>
+        <p>Love the rewards system, very useful.</p>
+        <span style="color:#00ff99;">Positive</span>
+      </div>
+
+      <div class="card" style="padding:12px; margin-top:10px;">
+        <p><strong>Mark Santos</strong> ⭐⭐⭐</p>
+        <p>Good but can improve loading speed.</p>
+        <span style="color:#ffcc00;">Neutral</span>
+      </div>
+    </div>
+
+    <div class="nav">
+    <div onclick="showSection('homeSection')">🏠 Home</div>
+    <div onclick="showSection('dataSection')">📊 Data</div>
+    <div onclick="showSection('eventSection')">🎉 Event</div>
+    <div onclick="showSection('loyaltySection')">⭐ Loyalty</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = ['homeSection', 'dataSection', 'eventSection', 'loyaltySection'];
+      sections.forEach(id => {
+        document.getElementById(id).style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    const canvas = document.getElementById('salesChart');
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          datasets: [{
+            label: 'Sales',
+            data: [3200, 4500, 3900, 5200, 4800, 6100, 5700],
+            borderColor: '#3a86ff',
+            tension: 0.4
+          }]
+        }
+      });
+    }
+  </script>
+</body>
+</html>

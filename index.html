@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Presentation</title>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* PAGES */
+section{
+    min-height:100vh;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+section.active{
+    display:flex;
+}
+
+/* CARD */
+.card{
+    background:#1e293b;
+    padding:55px;
+    border-radius:22px;
+    width:85%;
+    max-width:850px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* HERO */
+.hero-title{
+    font-size:3.2rem;
+    font-weight:700;
+    color:#38bdf8;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+.hero-sub{
+    font-size:1.2rem;
+    font-weight:300;
+    color:#cbd5e1;
+    margin-bottom:30px;
+    line-height:1.8;
+}
+
+/* LOGO */
+.logo{
+    width:140px;
+    height:140px;
+    background:white;
+    border-radius:25px;
+    margin:0 auto 25px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* HEADINGS */
+h2{
+    font-size:2.2rem;
+    font-weight:700;
+    margin-bottom:15px;
+    color:#22c55e;
+}
+
+h3{
+    font-size:1.2rem;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#38bdf8;
+}
+
+p{
+    font-size:1.05rem;
+    font-weight:300;
+    color:#e5e7eb;
+    line-height:1.8;
+}
+
+/* LIST */
+ul{
+    list-style:none;
+    margin-top:10px;
+}
+
+li{
+    font-size:1.05rem;
+    font-weight:300;
+    margin:6px 0;
+    color:#e5e7eb;
+}
+
+/* BUTTONS */
+button{
+    margin-top:25px;
+    margin-right:10px;
+    padding:12px 26px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:black;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#0ea5e9;
+    transform:scale(1.03);
+}
+
+.main-btn{
+    background:#22c55e;
+}
+
+.main-btn:hover{
+    background:#16a34a;
+}
+
+/* PAGE 3 DESIGN */
+.info-box{
+    background:#0f172a;
+    padding:20px;
+    border-radius:15px;
+    margin-top:18px;
+    text-align:left;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.custom-list{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.custom-list li{
+    list-style:disc;
+    line-height:1.7;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .card{
+        padding:35px 25px;
+    }
+
+    .hero-title{
+        font-size:2.3rem;
+    }
+
+    .hero-sub{
+        font-size:1rem;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="active" id="page1">
+
+<div class="card">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="logo.jpg.jfif" alt="PromoConnect Logo">
+    </div>
+
+    <div class="hero-title">
+        PromoConnect Mobile Application
+    </div>
+
+    <div class="hero-sub">
+        Helping Small Businesses Connect, Promote, and Grow
+    </div>
+
+    <button onclick="nextPage(2)">
+        Proceed to Group Information
+    </button>
+
+</div>
+
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2">
+
+<div class="card">
+
+    <h2>Group Information</h2>
+
+    <p>
+        <strong>Group 2</strong>
+    </p>
+
+    <h3>Members</h3>
+
+    <ul>
+        <li>Caranay, John Reinier P.</li>
+        <li>Chico, Ronianne Kim V.</li>
+        <li>Dela Cruz, Janelle Anne R.</li>
+        <li>Regalado, Wendel Mark G.</li>
+        <li>Lopez, Khenji T.</li>
+    </ul>
+
+    <button onclick="nextPage(1)">
+        Back
+    </button>
+
+    <button onclick="nextPage(3)">
+        Proceed to Description
+    </button>
+
+</div>
+
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3">
+
+<div class="card">
+
+    <h2>About the App</h2>
+
+    <div class="info-box">
+
+        <h3>What it does</h3>
+
+        <p>
+            PromoConnect is a mobile and web application that helps users discover nearby promotions,
+            discounts, rewards, and special deals from local small businesses.
+            It also allows customers to claim promos, earn loyalty points,
+            and communicate directly with businesses through the platform.
+        </p>
+
+    </div>
+
+    <div class="info-box">
+
+        <h3>Target Users</h3>
+
+        <ul class="custom-list">
+            <li>Students</li>
+            <li>Young professionals</li>
+            <li>Working adults</li>
+            <li>Budget-conscious consumers</li>
+            <li>Small business owners such as cafés, food stalls, retail shops, salons, and online sellers</li>
+        </ul>
+
+    </div>
+
+    <div class="info-box">
+
+        <h3>Business Problem Solved</h3>
+
+        <p>
+            Many small businesses struggle to attract customers,
+            promote their products effectively,
+            and compete with larger brands due to limited marketing budgets.
+            At the same time, customers often find it difficult to discover affordable deals
+            and trusted local promotions.
+            PromoConnect solves this by connecting businesses with potential customers
+            in one digital platform.
+        </p>
+
+    </div>
+
+    <div class="info-box">
+
+        <h3>Why It Is Useful</h3>
+
+        <p>
+            PromoConnect helps customers save money while discovering nearby businesses and rewards.
+            For businesses, it provides an affordable way to promote offers,
+            increase visibility, attract repeat customers,
+            and monitor campaign performance through analytics.
+        </p>
+
+    </div>
+
+    <button onclick="nextPage(2)">
+        Back
+    </button>
+
+    <button class="main-btn" onclick="goToMain()">
+        Go to Main Website
+    </button>
+
+</div>
+
+</section>
+
+<script>
+
+function nextPage(page){
+
+    document.querySelectorAll("section").forEach(sec=>{
+        sec.classList.remove("active");
+    });
+
+    document.getElementById("page"+page).classList.add("active");
+}
+
+function goToMain(){
+    window.location.href = "signup.html";
+}
+
+</script>
+
+</body>
+</html>

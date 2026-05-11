@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PromoConnect Customer</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#ffffff;
+    color:#111827;
+}
+
+:root{
+    /* McDo-inspired palette */
+    --primary:#DA291C;      /* McDo red */
+    --accent:#FFC72C;       /* McDo yellow */
+    --primary-hover:#b71f16;
+    --soft:#fff7e6;
+    --border:#fde2e2;
+}
+
+.topbar{
+    background:#ffffff;
+    color:#111827;
+    padding:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:bold;
+    border-bottom:3px solid var(--primary);
+}
+
+.bell{ color:var(--primary); }
+
+.container{
+    padding:15px;
+    padding-bottom:90px;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    margin:10px 0;
+    background:#fffdf7;
+    color:#111827;
+    outline:none;
+}
+
+.section{
+    margin-top:15px;
+    margin-bottom:10px;
+    color:var(--primary);
+    font-size:13px;
+    letter-spacing:1px;
+    font-weight:bold;
+}
+
+.card{
+    background:#ffffff;
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:12px;
+    border:1px solid var(--border);
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.card:hover{
+    background:var(--soft);
+}
+
+.promo{
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:#ffffff;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.tag{
+    font-size:10px;
+    padding:3px 8px;
+    border-radius:10px;
+    background:var(--accent);
+    color:#111827;
+    margin-left:8px;
+    font-weight:bold;
+}
+
+button{
+    background:var(--primary);
+    color:#ffffff;
+    border:none;
+    padding:10px;
+    border-radius:25px;
+    width:100%;
+    margin-top:10px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{ background:var(--primary-hover); }
+
+.nav{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-around;
+    padding:12px;
+    border-top:3px solid var(--primary);
+}
+
+.nav div{
+    font-size:12px;
+    text-align:center;
+    cursor:pointer;
+    color:#111827;
+}
+
+.nav div:hover{ color:var(--primary); }
+
+.hidden{display:none;}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div>🍔 PromoConnect</div>
+    <div class="bell">🔔</div>
+</div>
+
+<div id="home" class="container">
+    <input placeholder="🔍 Search promotions, shops, deals..." />
+
+    <div class="section">🎯 RECOMMENDED FOR YOU</div>
+
+    <div class="promo">20% OFF Milk Tea <span class="tag">Hot</span></div>
+    <div class="promo">Buy 1 Get 1 Pizza <span class="tag">New</span></div>
+    <div class="promo">Free Coffee Upgrade <span class="tag">Trending</span></div>
+    <div class="promo">10% Cashback Burger Deal <span class="tag">Popular</span></div>
+    <div class="promo">Weekend Dessert Sale <span class="tag">Limited</span></div>
+
+    <div class="section">📍 NEARBY PROMOTIONS</div>
+
+    <div class="card">
+        🍔 Burger House Promo
+        <div style="color:var(--primary);font-size:12px;">⭐ 4.5 • 0.8 km away • Open now</div>
+        <span class="tag">Popular</span>
+    </div>
+
+    <div class="card">
+        ☕ Coffee Shop Discount
+        <div style="color:var(--primary);font-size:12px;">⭐ 4.7 • 0.5 km away • Open now</div>
+        <span class="tag">Hot</span>
+    </div>
+
+    <div class="card">
+        🍕 Pizza Corner Promo
+        <div style="color:var(--primary);font-size:12px;">⭐ 4.4 • 1.2 km away • Limited time</div>
+        <span class="tag">New</span>
+    </div>
+
+    <div class="card">
+        🧋 Milk Tea Hub Deal
+        <div style="color:var(--primary);font-size:12px;">⭐ 4.8 • 0.3 km away • Trending</div>
+        <span class="tag">Trending</span>
+    </div>
+
+    <div class="card">
+        🍜 Local Noodle House Promo
+        <div style="color:var(--primary);font-size:12px;">⭐ 4.6 • 1.5 km away • Budget friendly</div>
+        <span class="tag">Budget</span>
+    </div>
+
+    <div class="section">🏪 SMALL BUSINESS SHOPS</div>
+
+    <div class="card">🧋 Maria’s Milk Tea Shop Special</div>
+    <div class="card">🥖 Local Bakery Fresh Bread Promo</div>
+    <div class="card">🍢 Street Food Stall Discount Deals</div>
+    <div class="card">🍛 Family Restaurant Budget Meals</div>
+
+    <div class="card">🏆 Your Points: <b style="color:var(--primary);">120 ⭐</b></div>
+</div>
+
+<div id="promo" class="container hidden">
+    <div class="card">
+        <h3>🧋 Buy 1 Get 1 Milk Tea</h3>
+        <p style="color:var(--primary);">📍 Maria’s Milk Tea Shop</p>
+        <p style="color:var(--primary);">⏰ Valid until: May 10</p>
+        <hr style="border-color:var(--border);">
+        <p>Buy 1 drink and get 1 FREE!</p>
+        <button onclick="alert('Promo Claimed! 🎟️')">Claim Promo</button>
+    </div>
+</div>
+
+<div id="rewards" class="container hidden">
+    <div class="card">
+        <h3>🎁 My Rewards</h3>
+        <p>⭐ Total Points: <b style="color:var(--primary);">120</b></p>
+        <p>🥉 Tier: Bronze Member</p>
+
+        <div style="margin-top:10px;">
+            <p style="font-size:12px;color:var(--primary);">Progress to Silver (300 pts)</p>
+            <div style="width:100%;background:#fff1f1;border-radius:20px;height:10px;overflow:hidden;">
+                <div style="width:40%;background:var(--primary);height:10px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>🍔 Food Rewards</h4>
+        <div class="card">
+            🍔 Free Burger Meal <span style="float:right;color:var(--primary);">250 pts</span>
+            <button>Redeem</button>
+        </div>
+        <div class="card">
+            🍕 Free Pizza Slice <span style="float:right;color:var(--primary);">180 pts</span>
+            <button>Redeem</button>
+        </div>
+        <div class="card">
+            🍜 Free Noodle Bowl <span style="float:right;color:var(--primary);">200 pts</span>
+            <button>Redeem</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>🥤 Drinks & Snacks</h4>
+        <div class="card">
+            🧋 Milk Tea Upgrade <span style="float:right;color:var(--primary);">120 pts</span>
+            <button>Redeem</button>
+        </div>
+        <div class="card">
+            ☕ Coffee Upgrade <span style="float:right;color:var(--primary);">80 pts</span>
+            <button>Redeem</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>🎟️ Special Rewards</h4>
+        <div class="card">
+            🎟️ 20% Discount Voucher <span style="float:right;color:var(--primary);">200 pts</span>
+            <button>Redeem</button>
+        </div>
+        <div class="card">
+            🎁 Mystery Box Reward <span style="float:right;color:var(--primary);">300 pts</span>
+            <button>Unlock</button>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id="messages" class="container hidden">
+
+    <div class="card">
+        <h3>💬 Messages</h3>
+        <p>Maria’s Milk Tea Shop</p>
+        <p style="color:var(--primary);">"Try our new flavor! Limited time promo 🍓"</p>
+    </div>
+
+    <div class="card">
+        <h4>🛒 Product Customization</h4>
+        <input placeholder="Select Size (Small / Medium / Large)" />
+        <input placeholder="Sugar Level (0% - 100%)" />
+        <input placeholder="Add-ons (Pearls, Jelly, Cream Cheese)" />
+        <button>Save Custom Order</button>
+    </div>
+
+    <div class="card">
+        <h4>⭐ Business Feedback</h4>
+        <textarea placeholder="Write your feedback about the shop or promo quality..."></textarea>
+        <button>Submit Feedback</button>
+    </div>
+
+    <div class="card">
+        <h4>💬 Chat Box</h4>
+        <div style="background:#fff7e6;padding:10px;border-radius:10px;margin-bottom:10px;">
+            Hi! How can we help you today?
+        </div>
+        <input placeholder="Type a message..." />
+        <button>Send</button>
+    </div>
+
+</div>
+</div>
+
+<div id="profile" class="container hidden">
+
+    <div class="card" style="text-align:center;">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--primary);margin:auto;display:flex;align-items:center;justify-content:center;color:#fff;font-size:32px;">
+            👤
+        </div>
+        <h3 style="margin:10px 0 5px 0;">Juan Dela Cruz</h3>
+        <p style="color:var(--primary);margin:0;">juan@email.com</p>
+        <p style="margin-top:8px;font-weight:bold;">🥉 Bronze Member</p>
+    </div>
+
+    <div class="card">
+        <h4>🏆 Loyalty Progress</h4>
+        <p style="font-size:12px;color:var(--primary);">Progress to Silver (300 pts)</p>
+        <div style="width:100%;background:#fff1f1;border-radius:20px;height:10px;overflow:hidden;">
+            <div style="width:40%;background:var(--primary);height:10px;"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>📊 Activity Summary</h4>
+        <div style="display:flex;justify-content:space-between;">
+            <div>⭐ Points<br><b style="color:var(--primary);">120</b></div>
+            <div>🎟️ Promos<br><b>5</b></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:10px;">
+            <div>💬 Messages<br><b>12</b></div>
+            <div>⭐ Reviews<br><b>3</b></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h4>⚙️ Settings</h4>
+        <p>🔔 Notifications</p>
+        <p>🔒 Privacy</p>
+        <p>💳 Payment Methods</p>
+        <p>✏️ Edit Profile</p>
+    </div>
+
+    <button>Edit Profile</button>
+
+</div>
+</div>
+
+<div class="nav">
+    <div onclick="show('home')">🏠 Home</div>
+    <div onclick="show('rewards')">🎁 Rewards</div>
+    <div onclick="show('messages')">💬 Inbox</div>
+    <div onclick="show('profile')">👤 Profile</div>
+</div>
+
+<script>
+function show(id){
+    const pages=['home','promo','rewards','messages','profile'];
+    pages.forEach(p=>{
+        let el=document.getElementById(p);
+        if(el) el.classList.add('hidden');
+    });
+    document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
